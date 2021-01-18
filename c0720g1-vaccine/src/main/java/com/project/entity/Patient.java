@@ -16,6 +16,7 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer patientId;
     private String name;
+    @Column(columnDefinition = "Date")
     private String dateOfBirth;
     private String gender;
     private String guardian;
@@ -26,7 +27,7 @@ public class Patient {
 
     @OneToMany(mappedBy = "patient")
     private Set<VaccinationHistory> vaccinationHistoryList;
-    @ManyToOne
-    @JoinColumn(name = "account_id",nullable = false)
+    @OneToOne
+    @JoinColumn(name = "account_id",nullable = false,unique = true)
     private Account account;
 }

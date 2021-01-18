@@ -21,6 +21,9 @@ public class Vaccine {
     private String age;
     private String maintenance;
     private Double dosage;
+    @Column(columnDefinition = "Date")
+    private String expired;
+    private Long quantity;
     private Boolean deleteFlag;
 
     @OneToMany(mappedBy = "vaccine")

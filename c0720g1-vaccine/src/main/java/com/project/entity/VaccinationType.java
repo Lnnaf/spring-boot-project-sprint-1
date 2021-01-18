@@ -14,7 +14,7 @@ import java.util.Set;
 public class VaccinationType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer vaccineTypeId;
+    private Integer vaccinationTypeId;
     private String name;
     @OneToMany(mappedBy = "vaccinationType")
     private Set<Vaccination>vaccinationList;

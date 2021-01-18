@@ -15,6 +15,7 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer employeeId;
     private String name;
+    @Column(columnDefinition = "Date")
     private String dateOfBirth;
     private String idCard;
     private String address;
@@ -23,7 +24,7 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "position_id",nullable = false)
     private Position position;
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "account_id",nullable = false)
     private Account account;
 }

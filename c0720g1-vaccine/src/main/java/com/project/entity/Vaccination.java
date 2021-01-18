@@ -15,8 +15,11 @@ public class Vaccination {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer vaccinationId;
+    @Column(columnDefinition = "Time")
     private String startTime;
+    @Column(columnDefinition = "Time")
     private String endTime;
+    @Column(columnDefinition = "Date")
     private String date;
     private Boolean status;
     private String description;

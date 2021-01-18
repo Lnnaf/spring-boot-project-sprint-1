@@ -17,10 +17,10 @@ public class Account {
     private Integer accountId;
     private String userName;
     private String encryptPw;
-    @OneToMany(mappedBy = "account")
-    private Set<Patient>patientList;
-    @OneToMany(mappedBy = "account")
-    private Set<Employee>employeeList;
+    @OneToOne(mappedBy = "account")
+    private Patient patient;
+    @OneToOne(mappedBy = "account")
+    private Employee employee;
     @OneToMany(mappedBy = "account")
     private Set<AccountRole>accountRoleList;
     @OneToMany(mappedBy = "account")

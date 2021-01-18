@@ -16,6 +16,7 @@ public class Invoice {
     private Integer invoiceId;
     private String transactionDate;
     private Long price;
+    @Column(columnDefinition = "Date")
     private String expired;
     private Boolean deleteFlag;
     private Long quantity;

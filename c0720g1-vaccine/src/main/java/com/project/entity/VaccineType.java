@@ -15,7 +15,7 @@ public class VaccineType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer vaccineTypeId;
-    private String nameVaccineType;
-    @OneToMany(mappedBy = "vaccinationType")
-    private Set<Vaccination> vaccinationList;
+    private String name;
+    @OneToMany(mappedBy = "vaccineType")
+    private Set<Vaccine> vaccineList;
 }

@@ -13,9 +13,10 @@ import javax.persistence.*;
 public class ImportAndExport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer importAndExportId;
     private String action;
     private Long quantity;
+    @Column(columnDefinition = "Date")
     private String date;
     private Long price;
     private Boolean deleteFlag;
